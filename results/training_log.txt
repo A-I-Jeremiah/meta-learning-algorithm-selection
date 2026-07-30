@@ -1,0 +1,143 @@
+
+[binary] GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1
+    RandomForest     accuracy=0.6031
+    GradientBoosting accuracy=0.5981
+    SVM              accuracy=0.5787
+    kNN              accuracy=0.5381
+    NeuralNetwork    accuracy=0.5550
+
+[binary] GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1
+    RandomForest     accuracy=0.6906
+    GradientBoosting accuracy=0.6606
+    SVM              accuracy=0.6694
+    kNN              accuracy=0.5994
+    NeuralNetwork    accuracy=0.6631
+
+[binary] GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1
+    RandomForest     accuracy=0.5419
+    GradientBoosting accuracy=0.5106
+    SVM              accuracy=0.5212
+    kNN              accuracy=0.5387
+    NeuralNetwork    accuracy=0.5275
+
+[binary] GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001
+    RandomForest     accuracy=0.6319
+    GradientBoosting accuracy=0.6725
+    SVM              accuracy=0.6337
+    kNN              accuracy=0.5488
+    NeuralNetwork    accuracy=0.6169
+
+[binary] GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_75_EDM_2_001
+    RandomForest     accuracy=0.6481
+    GradientBoosting accuracy=0.6875
+    SVM              accuracy=0.6631
+    kNN              accuracy=0.5894
+    NeuralNetwork    accuracy=0.6238
+
+[binary] analcatdata_boxing1
+    RandomForest     accuracy=0.7583
+    GradientBoosting accuracy=0.8250
+    SVM              accuracy=0.7167
+    kNN              accuracy=0.6583
+    NeuralNetwork    accuracy=0.7917
+
+[binary] analcatdata_boxing2
+    RandomForest     accuracy=0.6829
+    GradientBoosting accuracy=0.7043
+    SVM              accuracy=0.6601
+    kNN              accuracy=0.6977
+    NeuralNetwork    accuracy=0.6980
+
+[binary] analcatdata_creditscore
+    RandomForest     accuracy=0.9900
+    GradientBoosting accuracy=0.9700
+    SVM              accuracy=0.7900
+    kNN              accuracy=0.8000
+    NeuralNetwork    accuracy=0.8900
+
+[multiclass] analcatdata_dmft
+    RandomForest     accuracy=0.1744
+    GradientBoosting accuracy=0.2209
+    SVM              accuracy=0.2246
+    kNN              accuracy=0.1794
+    NeuralNetwork    accuracy=0.1932
+
+[multiclass] analcatdata_germangss
+    RandomForest     accuracy=0.2650
+    GradientBoosting accuracy=0.3975
+    SVM              accuracy=0.2075
+    kNN              accuracy=0.2225
+    NeuralNetwork    accuracy=0.2700
+
+[multiclass] balance_scale
+    RandomForest     accuracy=0.8208
+    GradientBoosting accuracy=0.8592
+    SVM              accuracy=0.9040
+    kNN              accuracy=0.8304
+    NeuralNetwork    accuracy=0.9728
+
+[multiclass] calendarDOW
+    RandomForest     accuracy=0.6140
+    GradientBoosting accuracy=0.6491
+    SVM              accuracy=0.5815
+    kNN              accuracy=0.5990
+    NeuralNetwork    accuracy=0.6241
+
+[multiclass] car_evaluation
+    RandomForest     accuracy=0.9826
+    GradientBoosting accuracy=0.9878
+    SVM              accuracy=0.9653
+    kNN              accuracy=0.9635
+    NeuralNetwork    accuracy=0.9896
+
+[multiclass] cars
+    RandomForest     accuracy=0.9158
+    GradientBoosting accuracy=0.9771
+    SVM              accuracy=0.7729
+    kNN              accuracy=0.8009
+    NeuralNetwork    accuracy=0.8189
+
+[multiclass] cloud
+    RandomForest     accuracy=0.4537
+    GradientBoosting accuracy=0.8706
+    SVM              accuracy=0.3147
+    kNN              accuracy=0.1753
+    NeuralNetwork    accuracy=0.2420
+
+[regression] 1027_ESL
+    RandomForest     r2=0.8251
+    GradientBoosting r2=0.8435
+    SVM              r2=0.8449
+    kNN              r2=0.8481
+    NeuralNetwork    r2=0.8482
+
+[regression] 1028_SWD
+    RandomForest     r2=0.3795
+    GradientBoosting r2=0.4137
+    SVM              r2=0.3731
+    kNN              r2=0.3501
+    NeuralNetwork    r2=0.3865
+
+[regression] 1029_LEV
+    RandomForest     r2=0.5054
+    GradientBoosting r2=0.5339
+    SVM              r2=0.5382
+    kNN              r2=0.4847
+    NeuralNetwork    r2=0.5362
+
+[regression] 1030_ERA
+    RandomForest     r2=0.3298
+    GradientBoosting r2=0.3362
+    SVM              r2=0.3255
+    kNN              r2=0.2024
+    NeuralNetwork    r2=0.3423
+
+[regression] 210_cloud
+    RandomForest     r2=0.7805
+    GradientBoosting r2=0.8088
+    SVM              r2=0.6169
+    kNN              r2=0.6997
+    NeuralNetwork    r2=0.8153
+
+Long results   -> C:\Users\USER\Desktop\XML_Project\meta-learning-algorithm-selection\results\cv_results_long.csv  (500 rows)
+Perf. matrix   -> C:\Users\USER\Desktop\XML_Project\meta-learning-algorithm-selection\results\performance_matrix.csv  (20 x 5)
