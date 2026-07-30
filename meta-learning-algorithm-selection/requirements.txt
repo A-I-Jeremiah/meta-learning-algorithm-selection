@@ -1,0 +1,13 @@
+numpy==2.2.6
+pandas==2.3.2
+scikit-learn==1.7.1
+pmlb==1.0.1.post3
+scipy==1.16.1
+seaborn==0.13.2
+matplotlib==3.10.7
+lxml==6.0.2          # for XML validation
+xmlschema==4.3.2
+jupyter==1.1.1       # run notebooks/main.ipynb
+nbconvert==7.17.1    # execute notebook headlessly for reproducibility check
+pytest==9.0.3        # run tests/ (schema validation + query checks)
+tabulate==0.9.0      # markdown table export in src/visualise.py

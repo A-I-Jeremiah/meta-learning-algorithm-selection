@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiment title="Meta-Learning for Algorithm Selection (sample subset)" cvFolds="5">
+  <Datasets>
+    <Dataset id="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" name="GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" task="binary" source="PMLB">
+      <MetaFeatures>
+        <n_instances>1600.0</n_instances>
+        <n_features>20.0</n_features>
+        <log_n_instances>3.204119982655925</log_n_instances>
+        <log_n_features>1.3010299956639813</log_n_features>
+        <feature_to_instance_ratio>0.0125</feature_to_instance_ratio>
+        <n_classes>2.0</n_classes>
+        <class_imbalance_ratio>1.0</class_imbalance_ratio>
+        <normalised_class_entropy>1.0</normalised_class_entropy>
+        <mean_feature_std>0.578570779669298</mean_feature_std>
+        <mean_abs_coef_variation>1.3938070694218954</mean_abs_coef_variation>
+        <mean_skewness>0.962878374799887</mean_skewness>
+        <mean_kurtosis>0.4733528986725527</mean_kurtosis>
+        <mean_abs_feature_correlation>0.020243140501796</mean_abs_feature_correlation>
+      </MetaFeatures>
+    </Dataset>
+    <Dataset id="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" name="GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" task="binary" source="PMLB">
+      <MetaFeatures>
+        <n_instances>1600.0</n_instances>
+        <n_features>20.0</n_features>
+        <log_n_instances>3.204119982655925</log_n_instances>
+        <log_n_features>1.3010299956639813</log_n_features>
+        <feature_to_instance_ratio>0.0125</feature_to_instance_ratio>
+        <n_classes>2.0</n_classes>
+        <class_imbalance_ratio>1.0</class_imbalance_ratio>
+        <normalised_class_entropy>1.0</normalised_class_entropy>
+        <mean_feature_std>0.5488226265826357</mean_feature_std>
+        <mean_abs_coef_variation>1.8611285689422172</mean_abs_coef_variation>
+        <mean_skewness>1.4546248589598985</mean_skewness>
+        <mean_kurtosis>4.077101492929594</mean_kurtosis>
+        <mean_abs_feature_correlation>0.0215862966995459</mean_abs_feature_correlation>
+      </MetaFeatures>
+    </Dataset>
+    <Dataset id="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" name="GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" task="binary" source="PMLB">
+      <MetaFeatures>
+        <n_instances>1600.0</n_instances>
+        <n_features>20.0</n_features>
+        <log_n_instances>3.204119982655925</log_n_instances>
+        <log_n_features>1.3010299956639813</log_n_features>
+        <feature_to_instance_ratio>0.0125</feature_to_instance_ratio>
+        <n_classes>2.0</n_classes>
+        <class_imbalance_ratio>1.0</class_imbalance_ratio>
+        <normalised_class_entropy>1.0</normalised_class_entropy>
+        <mean_feature_std>0.5497961710146428</mean_feature_std>
+        <mean_abs_coef_variation>1.5653912205398155</mean_abs_coef_variation>
+        <mean_skewness>1.1985076299712984</mean_skewness>
+        <mean_kurtosis>1.0130580096242716</mean_kurtosis>
+        <mean_abs_feature_correlation>0.0201385432754975</mean_abs_feature_correlation>
+      </MetaFeatures>
+    </Dataset>
+  </Datasets>
+  <Algorithms>
+    <Algorithm id="algo_RandomForest" name="RandomForest" family="ensemble-bagging">
+      <Hyperparameters>
+        <Hyperparameter name="bootstrap">True</Hyperparameter>
+        <Hyperparameter name="ccp_alpha">0.0</Hyperparameter>
+        <Hyperparameter name="criterion">gini</Hyperparameter>
+        <Hyperparameter name="max_features">sqrt</Hyperparameter>
+        <Hyperparameter name="min_impurity_decrease">0.0</Hyperparameter>
+        <Hyperparameter name="min_samples_leaf">1</Hyperparameter>
+        <Hyperparameter name="min_samples_split">2</Hyperparameter>
+        <Hyperparameter name="min_weight_fraction_leaf">0.0</Hyperparameter>
+        <Hyperparameter name="n_estimators">200</Hyperparameter>
+        <Hyperparameter name="oob_score">False</Hyperparameter>
+        <Hyperparameter name="warm_start">False</Hyperparameter>
+      </Hyperparameters>
+    </Algorithm>
+    <Algorithm id="algo_GradientBoosting" name="GradientBoosting" family="ensemble-boosting">
+      <Hyperparameters>
+        <Hyperparameter name="ccp_alpha">0.0</Hyperparameter>
+        <Hyperparameter name="criterion">friedman_mse</Hyperparameter>
+        <Hyperparameter name="learning_rate">0.1</Hyperparameter>
+        <Hyperparameter name="loss">log_loss</Hyperparameter>
+        <Hyperparameter name="max_depth">3</Hyperparameter>
+        <Hyperparameter name="min_impurity_decrease">0.0</Hyperparameter>
+        <Hyperparameter name="min_samples_leaf">1</Hyperparameter>
+        <Hyperparameter name="min_samples_split">2</Hyperparameter>
+        <Hyperparameter name="min_weight_fraction_leaf">0.0</Hyperparameter>
+        <Hyperparameter name="n_estimators">100</Hyperparameter>
+        <Hyperparameter name="subsample">1.0</Hyperparameter>
+        <Hyperparameter name="tol">0.0001</Hyperparameter>
+        <Hyperparameter name="validation_fraction">0.1</Hyperparameter>
+        <Hyperparameter name="warm_start">False</Hyperparameter>
+      </Hyperparameters>
+    </Algorithm>
+    <Algorithm id="algo_SVM" name="SVM" family="kernel-machine">
+      <Hyperparameters>
+        <Hyperparameter name="C">1.0</Hyperparameter>
+        <Hyperparameter name="break_ties">False</Hyperparameter>
+        <Hyperparameter name="cache_size">200</Hyperparameter>
+        <Hyperparameter name="coef0">0.0</Hyperparameter>
+        <Hyperparameter name="decision_function_shape">ovr</Hyperparameter>
+        <Hyperparameter name="degree">3</Hyperparameter>
+        <Hyperparameter name="gamma">scale</Hyperparameter>
+        <Hyperparameter name="kernel">rbf</Hyperparameter>
+        <Hyperparameter name="max_iter">-1</Hyperparameter>
+        <Hyperparameter name="probability">False</Hyperparameter>
+        <Hyperparameter name="shrinking">True</Hyperparameter>
+        <Hyperparameter name="tol">0.001</Hyperparameter>
+      </Hyperparameters>
+    </Algorithm>
+    <Algorithm id="algo_kNN" name="kNN" family="instance-based">
+      <Hyperparameters>
+        <Hyperparameter name="algorithm">auto</Hyperparameter>
+        <Hyperparameter name="leaf_size">30</Hyperparameter>
+        <Hyperparameter name="metric">minkowski</Hyperparameter>
+        <Hyperparameter name="n_neighbors">5</Hyperparameter>
+        <Hyperparameter name="p">2</Hyperparameter>
+        <Hyperparameter name="weights">uniform</Hyperparameter>
+      </Hyperparameters>
+    </Algorithm>
+    <Algorithm id="algo_NeuralNetwork" name="NeuralNetwork" family="neural-network">
+      <Hyperparameters>
+        <Hyperparameter name="activation">relu</Hyperparameter>
+        <Hyperparameter name="alpha">0.0001</Hyperparameter>
+        <Hyperparameter name="batch_size">auto</Hyperparameter>
+        <Hyperparameter name="beta_1">0.9</Hyperparameter>
+        <Hyperparameter name="beta_2">0.999</Hyperparameter>
+        <Hyperparameter name="early_stopping">False</Hyperparameter>
+        <Hyperparameter name="epsilon">1e-08</Hyperparameter>
+        <Hyperparameter name="hidden_layer_sizes">(64, 32)</Hyperparameter>
+        <Hyperparameter name="learning_rate">constant</Hyperparameter>
+        <Hyperparameter name="learning_rate_init">0.001</Hyperparameter>
+        <Hyperparameter name="max_fun">15000</Hyperparameter>
+        <Hyperparameter name="max_iter">1000</Hyperparameter>
+        <Hyperparameter name="momentum">0.9</Hyperparameter>
+        <Hyperparameter name="n_iter_no_change">10</Hyperparameter>
+        <Hyperparameter name="nesterovs_momentum">True</Hyperparameter>
+        <Hyperparameter name="power_t">0.5</Hyperparameter>
+        <Hyperparameter name="shuffle">True</Hyperparameter>
+        <Hyperparameter name="solver">adam</Hyperparameter>
+        <Hyperparameter name="tol">0.0001</Hyperparameter>
+        <Hyperparameter name="validation_fraction">0.1</Hyperparameter>
+        <Hyperparameter name="warm_start">False</Hyperparameter>
+      </Hyperparameters>
+    </Algorithm>
+  </Algorithms>
+  <Runs>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.621875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.565625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.628125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.61875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.58125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.5</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.575</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.603125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.653125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.659375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.565625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.54375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.56875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.634375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.58125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.534375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.503125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.540625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.5875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.525</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.559375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.54375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.553125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.565625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.553125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.675</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.70625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.684375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.709375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.678125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.725</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.646875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.784375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.521875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.65625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.678125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.703125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.6625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.646875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.590625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.640625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.628125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.584375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.553125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.6875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.671875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.6875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.65625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.6125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.559375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.54375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.5375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.51875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_RandomForest">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.55</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.50625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.51875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.503125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.5</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_GradientBoosting">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.525</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.54375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.5375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.5</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.503125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_SVM">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.521875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.559375</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.5125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.528125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.528125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_kNN">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.565625</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>0</fold>
+      <metric>accuracy</metric>
+      <value>0.553125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>1</fold>
+      <metric>accuracy</metric>
+      <value>0.51875</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>2</fold>
+      <metric>accuracy</metric>
+      <value>0.5125</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>3</fold>
+      <metric>accuracy</metric>
+      <value>0.525</value>
+    </Run>
+    <Run datasetRef="ds_GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1" algorithmRef="algo_NeuralNetwork">
+      <Dataset>GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1</Dataset>
+      <fold>4</fold>
+      <metric>accuracy</metric>
+      <value>0.528125</value>
+    </Run>
+  </Runs>
+</Experiment>

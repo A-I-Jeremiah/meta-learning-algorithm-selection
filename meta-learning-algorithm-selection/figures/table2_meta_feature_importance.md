@@ -1,0 +1,16 @@
+| Meta-feature                 |   Importance |
+|:-----------------------------|-------------:|
+| mean_abs_coef_variation      |       0.1258 |
+| mean_skewness                |       0.1219 |
+| feature_to_instance_ratio    |       0.1097 |
+| mean_kurtosis                |       0.0979 |
+| mean_feature_std             |       0.0939 |
+| mean_abs_feature_correlation |       0.0798 |
+| n_features                   |       0.0684 |
+| n_instances                  |       0.0595 |
+| log_n_instances              |       0.0521 |
+| n_classes                    |       0.0504 |
+| log_n_features               |       0.0464 |
+| task_code                    |       0.0426 |
+| normalised_class_entropy     |       0.0286 |
+| class_imbalance_ratio        |       0.023  |
