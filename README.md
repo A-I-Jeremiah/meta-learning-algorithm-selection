@@ -33,7 +33,7 @@ We:
 
 | Member | Role | Primary Ownership |
 |--------|------|-------------------|
-| **Akindipe Ireoluwawolemi Jeremiah** | Leader / ML Engineer | Full ML pipeline, meta-learner, statistical tests, core notebooks, final reproducibility |
+| **Akindipe Ireoluwawolemi Jeremiah** | ML Engineer | Full ML pipeline, meta-learner, statistical tests, core notebooks, final reproducibility |
 | **AJIBOLA** | Data Curator & Metadata Specialist | Dataset acquisition, cleaning, harmonisation, data dictionary & ethics documentation |
 | **AKINMOJU** | XML/XSD Architect | Complete XSD schema + sample valid XML instances + validation proof |
 | **AKINWOLA** | XPath/XQuery Developer | XPath & XQuery scripts for extraction and validation |
