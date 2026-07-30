@@ -244,7 +244,7 @@ Cite sources appropriately in the manuscript and data dictionary.
 
 ## 12. Contact
 
-**Group Leader / ML Engineer**  
+**ML Engineer**  
 Akindipe Ireoluwawolemi Jeremiah  
 Repository: https://github.com/A-I-Jeremiah/meta-learning-algorithm-selection
 
