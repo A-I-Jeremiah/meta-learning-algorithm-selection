@@ -1,0 +1,15 @@
+meta_feature,importance
+mean_abs_coef_variation,0.12578169082282653
+mean_skewness,0.1218944996268227
+feature_to_instance_ratio,0.10972427146783188
+mean_kurtosis,0.09793940279076212
+mean_feature_std,0.09389462929073439
+mean_abs_feature_correlation,0.07978490555834052
+n_features,0.06842246528962151
+n_instances,0.059505933754136646
+log_n_instances,0.052091730877476074
+n_classes,0.05037256077832284
+log_n_features,0.04635498699970206
+task_code,0.0426423045420479
+normalised_class_entropy,0.028568658346933066
+class_imbalance_ratio,0.02302195985444189
