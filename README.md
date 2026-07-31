@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/badge/License-Academic-green)](#)
 [![Status](https://img.shields.io/badge/Status-Active%20Development-orange)](#)
 
+📄 **Manuscript:** [Group3_Manuscript.docx](manuscript/Group3_Manuscript.docx) — the full IMRAD empirical paper (APA 7).
+
 ---
 
 ## 1. Project Overview
@@ -50,26 +52,61 @@ Detailed task allocation and phased roadmap are maintained in the project docume
 ```
 meta-learning-algorithm-selection/
 ├── data/
-│   ├── raw/                  # Original downloaded datasets
-│   ├── processed/            # Harmonised CSVs ready for the pipeline
-│   └── metadata/             # Data dictionary, ethics notes, source citations
-├── docs/                     # Methodology notes, contribution guide, meta-feature definitions
-├── figures/                  # High-resolution figures (generated)
-├── manuscript/               # IMRAD Word manuscript and supporting material
-├── notebooks/                # Jupyter notebooks (main analysis lives here)
-├── presentation/             # Scripts and final MP4
-├── results/                  # Performance matrices, rankings, statistical outputs (CSV/JSON)
-├── src/                      # Reusable Python modules
+│   ├── processed/                     # Harmonised, pipeline-ready CSVs (~20 datasets)
+│   │   └── dataset_index.csv          # Index of processed datasets
+│   └── metadata/
+│       └── dataset_index.json         # Machine-readable dataset metadata
+├── docs/
+│   ├── contribution_guide.md          # How to contribute
+│   └── methodology.md                 # Methodology notes
+├── figures/                           # High-resolution figures & tables (generated)
+│   ├── figure1_critical_difference.png
+│   ├── figure2_complexity_performance.png
+│   ├── figure3_performance_boxplot.png
+│   ├── figure4_rank_heatmap.png
+│   ├── table1_dataset_characteristics.(csv|md)
+│   └── table2_meta_feature_importance.(csv|md)
+├── manuscript/
+│   └── Group3_Manuscript.docx         # IMRAD manuscript (APA 7)
+├── notebooks/
+│   └── main.ipynb                     # Main end-to-end analysis notebook
+├── presentation/
+│   └── slides.pptx                    # Presentation deck
+├── results/                           # Performance matrices, rankings, stats (CSV/JSON)
+│   ├── performance_matrix.csv
+│   ├── cv_results_long.csv
+│   ├── normalised_scores.csv
+│   ├── ranks.csv · average_ranks.csv · best_algorithm.csv
+│   ├── meta_features.csv · meta_feature_importance.csv
+│   ├── meta_learner_predictions.csv · meta_learner_summary.json
+│   ├── statistical_tests.json · nemenyi_pairwise.csv · wilcoxon_vs_best.csv
+│   └── training_log.txt
+├── src/                               # Reusable Python modules
 │   ├── __init__.py
-│   ├── data_loader.py        # Load & prepare datasets
-│   ├── meta_features.py      # Extract dataset meta-features
-│   ├── models.py             # Algorithm definitions & training helpers
-│   ├── ranking.py            # Normalised ranking logic
-│   └── stats.py              # Friedman, Nemenyi, Wilcoxon, feature importance
-├── tests/                    # Unit / integration tests
-├── xml/                      # XSD schema, sample XML instances, XPath/XQuery scripts
+│   ├── data_loader.py                 # Load & prepare datasets
+│   ├── meta_features.py               # Extract dataset meta-features
+│   ├── models.py                      # Algorithm definitions & training helpers
+│   ├── ranking.py                     # Normalised ranking logic
+│   ├── stats.py                       # Friedman, Nemenyi, Wilcoxon, feature importance
+│   ├── meta_learner.py                # Meta-learner training & prediction
+│   ├── visualise.py                   # Figure/table generation
+│   └── xml_export.py                  # Export results to XML instances
+├── tests/                             # Unit / integration tests
+│   ├── test_schema_validation.py      # XSD validation of sample XML
+│   └── test_queries.py                # XPath/XQuery checks
+├── xml/
+│   ├── schema/
+│   │   └── experiment.xsd             # XSD schema for the experiment
+│   ├── samples/
+│   │   ├── sample_experiment.xml
+│   │   └── sample_results.xml
+│   └── queries/
+│       ├── extract_high_accuracy.xpath
+│       ├── best_algorithm_per_dataset.xquery
+│       └── validation_queries.xquery
+├── .gitattributes
 ├── requirements.txt
-└── README.md                 # You are here
+└── README.md                          # You are here
 ```
 
 ---
@@ -132,7 +169,7 @@ python -c "import sklearn, pmlb, pandas, numpy; print('Environment OK')"
 ### 5.1 Main analysis notebook
 
 ```bash
-jupyter notebook notebooks/01_meta_learning_pipeline.ipynb
+jupyter notebook notebooks/main.ipynb
 ```
 
 (or open the notebook in VS Code / JupyterLab)
@@ -156,7 +193,7 @@ From a clean environment:
 ```bash
 pip install -r requirements.txt
 python -m pytest tests/          # if tests are present
-jupyter nbconvert --to notebook --execute notebooks/01_meta_learning_pipeline.ipynb
+jupyter nbconvert --to notebook --execute notebooks/main.ipynb
 ```
 
 All numeric results must be regenerable from the committed code and data.
@@ -204,7 +241,7 @@ We work with **feature branches + Pull Requests**. Direct pushes to `main` are d
 | XML Schema (XSD) + sample instances | `xml/` · AKINMOJU | Pending |
 | XPath / XQuery scripts | `xml/` · AKINWOLA | Pending |
 | Tables & high-resolution figures | `figures/` + `results/` · AKINYELE | Pending |
-| Empirical manuscript (4–6 k words, IMRAD, APA 7) | `manuscript/` · AKINYEMI | Pending |
+| Empirical manuscript (4–6 k words, IMRAD, APA 7) | [`manuscript/Group3_Manuscript.docx`](manuscript/Group3_Manuscript.docx) · AKINYEMI | Pending |
 | 10-minute presentation (MP4) | `presentation/` · ASAMU | Pending |
 | Clean, runnable GitHub repository | This repo · Akindipe | Active |
 
